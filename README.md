@@ -3,4 +3,6 @@ SmartDraft
 
 League of Legends smart drafting application
 
-a
+much amaze
+
+wow
