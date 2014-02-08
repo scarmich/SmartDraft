@@ -7,3 +7,5 @@
 \\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\GenerateResource.write.1.tlog
 \\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.exe
 \\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.pdb
+C:\Users\Tom\Documents\GitHub\SmartDraft\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.exe
+C:\Users\Tom\Documents\GitHub\SmartDraft\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.pdb

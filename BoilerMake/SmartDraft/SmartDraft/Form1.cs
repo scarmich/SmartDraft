@@ -28,7 +28,7 @@ namespace SmartDraft
         {
             //When the user clicks the button, make all portraits visible
             button2.Visible = true;
-            button2.BackgroundImage = Image.FromFile(@"\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\Aatrox.png");
+            //button2.BackgroundImage = Image.FromFile(@"/img/Aatrox.png");
         }
         void button2_MouseEnter(object sender, EventArgs e)
         {
