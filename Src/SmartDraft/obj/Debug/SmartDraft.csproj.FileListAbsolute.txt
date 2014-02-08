@@ -1,0 +1,9 @@
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.exe.config
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.exe
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.pdb
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.Form1.resources
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.Properties.Resources.resources
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.csproj.GenerateResource.Cache
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.exe
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.pdb
