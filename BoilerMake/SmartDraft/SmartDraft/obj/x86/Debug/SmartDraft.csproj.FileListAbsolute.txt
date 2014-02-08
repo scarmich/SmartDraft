@@ -1,9 +1,0 @@
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\bin\Debug\SmartDraft.exe
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\bin\Debug\SmartDraft.pdb
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\ResolveAssemblyReference.cache
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.Form1.resources
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.Properties.Resources.resources
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\GenerateResource.read.1.tlog
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\GenerateResource.write.1.tlog
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.exe
-\\vermouth\homes\powerst\My Documents\BoilerMake\SmartDraft\SmartDraft\obj\x86\Debug\SmartDraft.pdb
