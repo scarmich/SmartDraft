@@ -19,11 +19,11 @@ public class ParseUserData
             System.Diagnostics.Debug.WriteLine(gamelog);
 
             StreamReader reader = File.OpenText(gamelog);
-            String line; String champ = "";
+            String line; String champ = ""; String username = "";
 
             while ((line = reader.ReadLine()) != null)
             {
-                if (line.Contains("ALWAYS") && line.Contains("Creating Hero") )
+                if (line.Contains("ALWAYS") && line.Contains("Creating Hero") && line.Contains("...") == false )
                 {
                     line = reader.ReadLine();
                     if (line.Contains("ALWAYS") == false) { 
@@ -33,22 +33,45 @@ public class ParseUserData
                     int index = line.IndexOf("ALWAYS");
                     line = line.Substring(index + 8);
 
-                    if ( line.Contains("Hero") )
+                    if ( line.Contains("Hero") && line.Contains("pawning") == false )
                     {
                         String[] components = line.Split(' ');
+                        int compLength = components.Length;
                         champ = components[1];
-                        if (components[1].Contains("(")) { components = components[1].Split('('); champ = components[0]; }
-                    }
-                    if (line.Contains("Spawning"))
-                    {
-                        String[] components = line.Split(' ');
-                        champ = components[2].Substring(1, components[2].Length - 2);
+                        if (components[1].Contains("(")) { String[] components2 = components[1].Split('('); champ = components2[0]; }
+
+                        username = components[4];
+                        if (compLength > 5)
+                        {
+                            for (int i = 5; i < compLength; i++)
+                            {
+                                username = username + " " + components[i];
+                            }
+                        }
                     }
 
-                    System.Diagnostics.Debug.WriteLine(champ);
-                    //System.Diagnostics.Debug.WriteLine("Index of ALWAYS = " + index);
-                   
-                    //System.Diagnostics.Debug.WriteLine(line);
+                    System.Diagnostics.Debug.WriteLine(username + " is using " + champ);
+
+                }
+                else if (line.Contains("ALWAYS") && line.Contains("Hero") && line.Contains("created for"))
+                {
+                    int index = line.IndexOf("ALWAYS");
+                    line = line.Substring(index + 8);
+
+                    String[] components = line.Split(' ');
+                    int compLength = components.Length;
+                    champ = components[1];
+                    if (components[1].Contains("(")) { String[] components2 = components[1].Split('('); champ = components2[0]; }
+
+                    username = components[4];
+                    if (compLength > 5)
+                    {
+                        for (int i = 5; i < compLength; i++)
+                        {
+                            username = username + " " + components[i];
+                        }
+                    }
+                    System.Diagnostics.Debug.WriteLine(username + " is using " + champ);
                 }
             }
 

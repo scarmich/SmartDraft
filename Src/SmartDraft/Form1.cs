@@ -80,6 +80,7 @@ namespace SmartDraft
 
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
+            System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
 
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
@@ -116,6 +117,9 @@ namespace SmartDraft
                 //need to adjust this based on window size
 
             }
+
+            System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
+
             for (int i = 0; i < 5; i++)
             {
                 if (imgarray[i].GetPixel(20, 10).A == 255
@@ -149,7 +153,11 @@ namespace SmartDraft
                 }
                 //need to adjust this based on window size
 
-            }/*
+            }
+
+            System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
+            
+            /*
             Color[,] pixelarray = new Color[10,12];
             for (int i = 0; i < 10; i ++ )
             {
