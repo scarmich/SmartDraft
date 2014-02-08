@@ -28,146 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.radSupport = new System.Windows.Forms.RadioButton();
+            this.radJungle = new System.Windows.Forms.RadioButton();
+            this.radADC = new System.Windows.Forms.RadioButton();
+            this.radSolo = new System.Windows.Forms.RadioButton();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnDraft = new System.Windows.Forms.Button();
+            this.btnChamp1 = new System.Windows.Forms.Button();
+            this.btnChamp4 = new System.Windows.Forms.Button();
+            this.btnChamp2 = new System.Windows.Forms.Button();
+            this.btnChamp3 = new System.Windows.Forms.Button();
+            this.btnChamp5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // radSupport
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 98);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Support";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radSupport.AutoSize = true;
+            this.radSupport.Location = new System.Drawing.Point(12, 98);
+            this.radSupport.Name = "radSupport";
+            this.radSupport.Size = new System.Drawing.Size(62, 17);
+            this.radSupport.TabIndex = 0;
+            this.radSupport.TabStop = true;
+            this.radSupport.Text = "Support";
+            this.radSupport.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radJungle
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 75);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(56, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Jungle";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radJungle.AutoSize = true;
+            this.radJungle.Location = new System.Drawing.Point(12, 75);
+            this.radJungle.Name = "radJungle";
+            this.radJungle.Size = new System.Drawing.Size(56, 17);
+            this.radJungle.TabIndex = 1;
+            this.radJungle.TabStop = true;
+            this.radJungle.Text = "Jungle";
+            this.radJungle.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radADC
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(12, 52);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(47, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "ADC";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radADC.AutoSize = true;
+            this.radADC.Location = new System.Drawing.Point(12, 52);
+            this.radADC.Name = "radADC";
+            this.radADC.Size = new System.Drawing.Size(47, 17);
+            this.radADC.TabIndex = 2;
+            this.radADC.TabStop = true;
+            this.radADC.Text = "ADC";
+            this.radADC.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radSolo
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(12, 29);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(73, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Solo Lane";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radSolo.AutoSize = true;
+            this.radSolo.Location = new System.Drawing.Point(12, 29);
+            this.radSolo.Name = "radSolo";
+            this.radSolo.Size = new System.Drawing.Size(73, 17);
+            this.radSolo.TabIndex = 3;
+            this.radSolo.TabStop = true;
+            this.radSolo.Text = "Solo Lane";
+            this.radSolo.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Select Your Lane";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(9, 12);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(87, 13);
+            this.lblTitle.TabIndex = 4;
+            this.lblTitle.Text = "Select Your Role";
             // 
-            // button1
+            // btnDraft
             // 
-            this.button1.Location = new System.Drawing.Point(12, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Smart Draft!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDraft.Location = new System.Drawing.Point(12, 122);
+            this.btnDraft.Name = "btnDraft";
+            this.btnDraft.Size = new System.Drawing.Size(75, 23);
+            this.btnDraft.TabIndex = 5;
+            this.btnDraft.Text = "Smart Draft!";
+            this.btnDraft.UseVisualStyleBackColor = true;
+            this.btnDraft.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnChamp1
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(183, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 120);
-            this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnChamp1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChamp1.Location = new System.Drawing.Point(183, 12);
+            this.btnChamp1.Name = "btnChamp1";
+            this.btnChamp1.Size = new System.Drawing.Size(120, 120);
+            this.btnChamp1.TabIndex = 6;
+            this.btnChamp1.UseVisualStyleBackColor = true;
+            this.btnChamp1.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnChamp4
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(561, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 120);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnChamp4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChamp4.Location = new System.Drawing.Point(561, 12);
+            this.btnChamp4.Name = "btnChamp4";
+            this.btnChamp4.Size = new System.Drawing.Size(120, 120);
+            this.btnChamp4.TabIndex = 7;
+            this.btnChamp4.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnChamp2
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(309, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 120);
-            this.button4.TabIndex = 8;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnChamp2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChamp2.Location = new System.Drawing.Point(309, 12);
+            this.btnChamp2.Name = "btnChamp2";
+            this.btnChamp2.Size = new System.Drawing.Size(120, 120);
+            this.btnChamp2.TabIndex = 8;
+            this.btnChamp2.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnChamp3
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(435, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 120);
-            this.button5.TabIndex = 9;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnChamp3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChamp3.Location = new System.Drawing.Point(435, 12);
+            this.btnChamp3.Name = "btnChamp3";
+            this.btnChamp3.Size = new System.Drawing.Size(120, 120);
+            this.btnChamp3.TabIndex = 9;
+            this.btnChamp3.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnChamp5
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(687, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 120);
-            this.button6.TabIndex = 10;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnChamp5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChamp5.Location = new System.Drawing.Point(687, 12);
+            this.btnChamp5.Name = "btnChamp5";
+            this.btnChamp5.Size = new System.Drawing.Size(120, 120);
+            this.btnChamp5.TabIndex = 10;
+            this.btnChamp5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 151);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.btnChamp5);
+            this.Controls.Add(this.btnChamp3);
+            this.Controls.Add(this.btnChamp2);
+            this.Controls.Add(this.btnChamp4);
+            this.Controls.Add(this.btnChamp1);
+            this.Controls.Add(this.btnDraft);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.radSolo);
+            this.Controls.Add(this.radADC);
+            this.Controls.Add(this.radJungle);
+            this.Controls.Add(this.radSupport);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Champs4Chumps: By Shawn Carmichael, Tom Powers, Ryan Rumble";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,17 +176,17 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.RadioButton radSupport;
+        private System.Windows.Forms.RadioButton radJungle;
+        private System.Windows.Forms.RadioButton radADC;
+        private System.Windows.Forms.RadioButton radSolo;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnDraft;
+        private System.Windows.Forms.Button btnChamp1;
+        private System.Windows.Forms.Button btnChamp4;
+        private System.Windows.Forms.Button btnChamp2;
+        private System.Windows.Forms.Button btnChamp3;
+        private System.Windows.Forms.Button btnChamp5;
     }
 }
 
