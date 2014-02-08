@@ -59,17 +59,6 @@ namespace SmartDraft
             //min height total = 640
             //from champ 1 to champ 2 is 62 -> 81, width of img is 46
             ToolTip tip = new ToolTip();
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-            //this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
-            this.btnChamp1.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
->>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
->>>>>>> a594736e3a490afb10deb8fa7df680b53846419e
->>>>>>> 1d889c316a9a47fc45c82a3cac2890ef0e5c08bc
         }
 
         /*
@@ -86,18 +75,12 @@ namespace SmartDraft
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
             int usernum;
-=======
-<<<<<<< HEAD
->>>>>>> 1d889c316a9a47fc45c82a3cac2890ef0e5c08bc
+
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
-            
->>>>>>> a594736e3a490afb10deb8fa7df680b53846419e
+
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
             IntPtr ptr = lol.MainWindowHandle;
@@ -165,8 +148,7 @@ namespace SmartDraft
                     y += 90;
                 }
                 //need to adjust this based on window size
-                
-<<<<<<< HEAD
+
             }/*
             Color[,] pixelarray = new Color[10,12];
             for (int i = 0; i < 10; i ++ )
@@ -199,17 +181,8 @@ namespace SmartDraft
             btnChamp3.BackgroundImage = imgarray2[2];
             btnChamp4.BackgroundImage = imgarray2[3];
             btnChamp5.BackgroundImage = imgarray2[4];
-            
-=======
-            }
-            btnChamp1.BackgroundImage = imgarray[0];
-            btnChamp2.BackgroundImage = imgarray[1];
-<<<<<<< HEAD
 
-=======
->>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
->>>>>>> a594736e3a490afb10deb8fa7df680b53846419e
->>>>>>> 1d889c316a9a47fc45c82a3cac2890ef0e5c08bc
+           
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
