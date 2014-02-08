@@ -13,7 +13,6 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 
 
-
 namespace SmartDraft
 {
 
@@ -60,7 +59,11 @@ namespace SmartDraft
             //min height total = 640
             //from champ 1 to champ 2 is 62 -> 81, width of img is 46
             ToolTip tip = new ToolTip();
+<<<<<<< HEAD
             //this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
+=======
+            this.btnChamp1.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
+>>>>>>> 25d1a3eb62028118c8e9af5cc8350a1fb05c1e2d
         }
 
         /*
@@ -102,23 +105,29 @@ namespace SmartDraft
             }
             string champdata = sb.ToString();
             
-            if(radioButton4.Checked){
+            if(radSolo.Checked == true)
+            {
                 //Solo Lane
                 //run(solo,champdata)
             }
-            else if(radioButton3.Checked){
+            else if(radADC.Checked == true)
+            {
                 //ADC
                 //run(adc,champdata)
             }
-            else if (radioButton2.Checked)
+            else if (radJungle.Checked == true)
             {
                 //Jungle
                 //run(jungle,champdata)
             }
-            else
+            else if (radSupport.Checked == true)
             {
                 //Support
                 //run(sup,champdata)
+            }
+            else //nothing is selected
+            {
+                MessageBox.Show("Please select a role you are picking for.");
             }
         }
 
