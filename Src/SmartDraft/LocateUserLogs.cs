@@ -4,16 +4,23 @@ using System.Windows.Forms;
 
 public class LocateUserLogs
 {
-	public String LocateUserLogs()
+	public LocateUserLogs()
 	{
-        if (Directory.Exists("C:\\Riot Games\\League of Legends\\Logs"))
+	}
+
+    public String locate()
+    {
+        if (Directory.Exists("C:\\Riot Games\\League of Legends\\Logs\\Game - R3d Logs"))
         {
-            MessageBox.Show("The log files were not detected in their default install location. Please specify the 'Riot Games\\League of Legends\\Logs' directory location.");
-            return "Somewhere else";
+            return "C:\\Riot Games\\League of Legends\\Logs\\Game - R3d Logs";
         }
         else
         {
-            return "C:\\Riot Games\\League of Legends\\Logs";
+            MessageBox.Show("Log files are not found at the default install location. Please select the location of the 'Game - R3d Logs' folder.  (Default install location is 'C:\\Riot Games\\League of Legends\\Logs\\Game - R3d Logs')");
+
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            DialogResult result = fbd.ShowDialog();
+            return fbd.SelectedPath;
         }
-	}
+    }
 }
