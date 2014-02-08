@@ -1,9 +1,0 @@
-C:\SmartDraft\SmartDraft\bin\Debug\SmartDraft.exe.config
-C:\SmartDraft\SmartDraft\bin\Debug\SmartDraft.exe
-C:\SmartDraft\SmartDraft\bin\Debug\SmartDraft.pdb
-C:\SmartDraft\SmartDraft\obj\Debug\SmartDraft.csprojResolveAssemblyReference.cache
-C:\SmartDraft\SmartDraft\obj\Debug\SmartDraft.Form1.resources
-C:\SmartDraft\SmartDraft\obj\Debug\SmartDraft.Properties.Resources.resources
-C:\SmartDraft\SmartDraft\obj\Debug\SmartDraft.csproj.GenerateResource.Cache
-C:\SmartDraft\SmartDraft\obj\Debug\SmartDraft.exe
-C:\SmartDraft\SmartDraft\obj\Debug\SmartDraft.pdb
