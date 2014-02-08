@@ -83,13 +83,22 @@ namespace SmartDraft
             Process lol = processes[0];
             IntPtr ptr = lol.MainWindowHandle;
             Rectangle NotepadRect = new Rectangle();
-            int i = NotepadRect.Bottom;
+            //int i = NotepadRect.Bottom;
             
             //MessageBox.Show(""+i);
             GetWindowRect(ptr, out NotepadRect);
             MessageBox.Show("" + NotepadRect.X);
-            
-            btnChamp2.BackgroundImage = CaptureScreen(NotepadRect.X, NotepadRect.Y);
+            Bitmap[] imgarray = new Bitmap[10];
+            int x = NotepadRect.X;
+            int y = NotepadRect.Y;
+            for (int i = 0; i < 10; i ++ )
+            {
+                imgarray[i] = CaptureScreen(x,y);
+                y += 20;
+                
+            }
+            btnChamp1.BackgroundImage = imgarray[0];
+            btnChamp2.BackgroundImage = imgarray[1];
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
