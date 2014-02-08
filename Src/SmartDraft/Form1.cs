@@ -78,8 +78,14 @@ namespace SmartDraft
 
             int usernum;
 
+<<<<<<< HEAD
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
+            System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
+=======
+            //ParseUserData thing1 = new ParseUserData();
+            //bool thingValue = thing1.parse();
+>>>>>>> c5993f8e81375f6dee3f45d5b3f45abcf39b868b
 
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
@@ -116,6 +122,9 @@ namespace SmartDraft
                 //need to adjust this based on window size
 
             }
+
+            System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
+
             for (int i = 0; i < 5; i++)
             {
                 if (imgarray[i].GetPixel(20, 10).A == 255
@@ -149,7 +158,11 @@ namespace SmartDraft
                 }
                 //need to adjust this based on window size
 
-            }/*
+            }
+
+            System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
+            
+            /*
             Color[,] pixelarray = new Color[10,12];
             for (int i = 0; i < 10; i ++ )
             {
@@ -160,24 +173,25 @@ namespace SmartDraft
             }*/
             for (int i = 0; i < 5; i++ )
             {
-                /*imgarray2[i].SetPixel(75, 13, Color.Pink);
-                imgarray2[i].SetPixel(75, 53, Color.Pink);
-                imgarray2[i].SetPixel(75, 33, Color.Pink);
+               /* imgarray[i].SetPixel(75, 13, Color.Pink);
+                imgarray[i].SetPixel(75, 53, Color.Pink);
+                imgarray[i].SetPixel(75, 33, Color.Pink);
 
-                imgarray2[i].SetPixel(55, 13, Color.Pink);
-                imgarray2[i].SetPixel(55, 53, Color.Pink);
-                imgarray2[i].SetPixel(55, 33, Color.Pink);
+                imgarray[i].SetPixel(55, 13, Color.Pink);
+                imgarray[i].SetPixel(55, 53, Color.Pink);
+                imgarray[i].SetPixel(55, 33, Color.Pink);
 
-                imgarray2[i].SetPixel(35, 13, Color.Pink);
-                imgarray2[i].SetPixel(35, 53, Color.Pink);
-                imgarray2[i].SetPixel(35, 33, Color.Pink);
+                imgarray[i].SetPixel(35, 13, Color.Pink);
+                imgarray[i].SetPixel(35, 53, Color.Pink);
+                imgarray[i].SetPixel(35, 33, Color.Pink);
 
-                imgarray2[i].SetPixel(45, 23, Color.Pink);
-                imgarray2[i].SetPixel(65, 23, Color.Pink);
-                imgarray2[i].SetPixel(45, 43, Color.Pink);
-                imgarray2[i].SetPixel(65, 43, Color.Pink);
-                */
-                System.Diagnostics.Debug.WriteLine(imgarray2[i].GetPixel(75,13)+""
+                imgarray[i].SetPixel(45, 23, Color.Pink);
+                imgarray[i].SetPixel(65, 23, Color.Pink);
+                imgarray[i].SetPixel(45, 43, Color.Pink);
+                imgarray[i].SetPixel(65, 43, Color.Pink);*/
+                string temp = "";
+                string[] champ = new string[5];
+                temp = imgarray2[i].GetPixel(75,13)+""
                     +imgarray2[i].GetPixel(75,53)+""
                     +imgarray2[i].GetPixel(75,33)+""
                     +imgarray2[i].GetPixel(55,13)+""
@@ -189,7 +203,32 @@ namespace SmartDraft
                     +imgarray2[i].GetPixel(45,23)+""
                     +imgarray2[i].GetPixel(65,23)+""
                     +imgarray2[i].GetPixel(45,43)+""
-                    +imgarray2[i].GetPixel(65,43));
+                    +imgarray2[i].GetPixel(65,43);
+                //read file line by line
+                //if(curLine.Contains(temp))
+                //champ[i] = first word
+                //MessageBox.Show(champ[i]);
+                MessageBox.Show(temp);
+                String line;
+
+                // Read the file and display it line by line.
+                StreamReader file = File.OpenText((String)"maps.txt");
+                MessageBox.Show("before");
+                MessageBox.Show(file.ReadLine());
+                while ((line = file.ReadLine()) != null)
+                {
+                    MessageBox.Show("the line"+line);
+                    if(line.Contains(temp)){
+                        champ[i] = line.Substring(0, line.IndexOf(" "));
+                    }
+                }
+                MessageBox.Show("after while"+champ[i]);
+                file.Close();
+
+
+
+
+
             }
             Color[,] enemyVals = new Color[5,13];
             //enemy champ 1
@@ -273,7 +312,7 @@ namespace SmartDraft
             btnChamp4.BackgroundImage = imgarray2[3];
             btnChamp5.BackgroundImage = imgarray2[4];
 
-           
+           /*
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
@@ -286,7 +325,7 @@ namespace SmartDraft
                 }
             }
             string champdata = sb.ToString();
-            
+            */
             if(radSolo.Checked == true)
             {
                 //Solo Lane
