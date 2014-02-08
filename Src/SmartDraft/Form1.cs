@@ -78,9 +78,14 @@ namespace SmartDraft
 
             int usernum;
 
+<<<<<<< HEAD
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
             System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
+=======
+            //ParseUserData thing1 = new ParseUserData();
+            //bool thingValue = thing1.parse();
+>>>>>>> c5993f8e81375f6dee3f45d5b3f45abcf39b868b
 
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
@@ -166,31 +171,148 @@ namespace SmartDraft
                     pixelarray[i,j] = 
                 }
             }*/
-            
-            imgarray2[1].SetPixel(75, 13,Color.Pink);
-            imgarray2[1].SetPixel(75, 53, Color.Pink);
-            imgarray2[1].SetPixel(75, 33, Color.Pink);
+            for (int i = 0; i < 5; i++ )
+            {
+               /* imgarray[i].SetPixel(75, 13, Color.Pink);
+                imgarray[i].SetPixel(75, 53, Color.Pink);
+                imgarray[i].SetPixel(75, 33, Color.Pink);
 
-            imgarray2[1].SetPixel(55, 13, Color.Pink);
-            imgarray2[1].SetPixel(55, 53, Color.Pink);
-            imgarray2[1].SetPixel(55, 33, Color.Pink);
+                imgarray[i].SetPixel(55, 13, Color.Pink);
+                imgarray[i].SetPixel(55, 53, Color.Pink);
+                imgarray[i].SetPixel(55, 33, Color.Pink);
 
-            imgarray2[1].SetPixel(35, 13, Color.Pink);
-            imgarray2[1].SetPixel(35, 53, Color.Pink);
-            imgarray2[1].SetPixel(35, 33, Color.Pink);
+                imgarray[i].SetPixel(35, 13, Color.Pink);
+                imgarray[i].SetPixel(35, 53, Color.Pink);
+                imgarray[i].SetPixel(35, 33, Color.Pink);
 
-            imgarray2[1].SetPixel(45, 23, Color.Pink);
-            imgarray2[1].SetPixel(65, 23, Color.Pink);
-            imgarray2[1].SetPixel(45, 43, Color.Pink);
-            imgarray2[1].SetPixel(65, 43, Color.Pink);
-            
+                imgarray[i].SetPixel(45, 23, Color.Pink);
+                imgarray[i].SetPixel(65, 23, Color.Pink);
+                imgarray[i].SetPixel(45, 43, Color.Pink);
+                imgarray[i].SetPixel(65, 43, Color.Pink);*/
+                string temp = "";
+                string[] champ = new string[5];
+                temp = imgarray2[i].GetPixel(75,13)+""
+                    +imgarray2[i].GetPixel(75,53)+""
+                    +imgarray2[i].GetPixel(75,33)+""
+                    +imgarray2[i].GetPixel(55,13)+""
+                    +imgarray2[i].GetPixel(55,53)+""
+                    +imgarray2[i].GetPixel(55,33)+""
+                    +imgarray2[i].GetPixel(35,13)+""
+                    +imgarray2[i].GetPixel(35,53)+""
+                    +imgarray2[i].GetPixel(35,33)+""
+                    +imgarray2[i].GetPixel(45,23)+""
+                    +imgarray2[i].GetPixel(65,23)+""
+                    +imgarray2[i].GetPixel(45,43)+""
+                    +imgarray2[i].GetPixel(65,43);
+                //read file line by line
+                //if(curLine.Contains(temp))
+                //champ[i] = first word
+                //MessageBox.Show(champ[i]);
+                MessageBox.Show(temp);
+                String line;
+
+                // Read the file and display it line by line.
+                StreamReader file = File.OpenText((String)"maps.txt");
+                MessageBox.Show("before");
+                MessageBox.Show(file.ReadLine());
+                while ((line = file.ReadLine()) != null)
+                {
+                    MessageBox.Show("the line"+line);
+                    if(line.Contains(temp)){
+                        champ[i] = line.Substring(0, line.IndexOf(" "));
+                    }
+                }
+                MessageBox.Show("after while"+champ[i]);
+                file.Close();
+
+
+
+
+
+            }
+            Color[,] enemyVals = new Color[5,13];
+            //enemy champ 1
+            enemyVals[0,0] = imgarray2[0].GetPixel(75, 13);
+            enemyVals[0, 1] = imgarray2[0].GetPixel(75, 53);
+            enemyVals[0, 2] = imgarray2[0].GetPixel(75, 33);
+            enemyVals[0, 3] = imgarray2[0].GetPixel(55, 13);
+            enemyVals[0, 4] = imgarray2[0].GetPixel(55, 53);
+            enemyVals[0, 5] = imgarray2[0].GetPixel(55, 33);
+            enemyVals[0, 6] = imgarray2[0].GetPixel(35, 13);
+            enemyVals[0, 7] = imgarray2[0].GetPixel(35, 53);
+            enemyVals[0, 8] = imgarray2[0].GetPixel(35, 33);
+            enemyVals[0, 9] = imgarray2[0].GetPixel(45, 23);
+            enemyVals[0, 10] = imgarray2[0].GetPixel(65, 23);
+            enemyVals[0, 11] = imgarray2[0].GetPixel(45, 43);
+            enemyVals[0, 12] = imgarray2[0].GetPixel(65, 43);
+
+            //enemy champ 2
+            enemyVals[1, 0] = imgarray2[1].GetPixel(75, 13);
+            enemyVals[1, 1] = imgarray2[1].GetPixel(75, 53);
+            enemyVals[1, 2] = imgarray2[1].GetPixel(75, 33);
+            enemyVals[1, 3] = imgarray2[1].GetPixel(55, 13);
+            enemyVals[1, 4] = imgarray2[1].GetPixel(55, 53);
+            enemyVals[1, 5] = imgarray2[1].GetPixel(55, 33);
+            enemyVals[1, 6] = imgarray2[1].GetPixel(35, 13);
+            enemyVals[1, 7] = imgarray2[1].GetPixel(35, 53);
+            enemyVals[1, 8] = imgarray2[1].GetPixel(35, 33);
+            enemyVals[1, 9] = imgarray2[1].GetPixel(45, 23);
+            enemyVals[1, 10] = imgarray2[1].GetPixel(65, 23);
+            enemyVals[1, 11] = imgarray2[1].GetPixel(45, 43);
+            enemyVals[1, 12] = imgarray2[1].GetPixel(65, 43);
+
+            //enemy champ 3
+            enemyVals[2, 0] = imgarray2[2].GetPixel(75, 13);
+            enemyVals[2, 1] = imgarray2[2].GetPixel(75, 53);
+            enemyVals[2, 2] = imgarray2[2].GetPixel(75, 33);
+            enemyVals[2, 3] = imgarray2[2].GetPixel(55, 13);
+            enemyVals[2, 4] = imgarray2[2].GetPixel(55, 53);
+            enemyVals[2, 5] = imgarray2[2].GetPixel(55, 33);
+            enemyVals[2, 6] = imgarray2[2].GetPixel(35, 13);
+            enemyVals[2, 7] = imgarray2[2].GetPixel(35, 53);
+            enemyVals[2, 8] = imgarray2[2].GetPixel(35, 33);
+            enemyVals[2, 9] = imgarray2[2].GetPixel(45, 23);
+            enemyVals[2, 10] = imgarray2[2].GetPixel(65, 23);
+            enemyVals[2, 11] = imgarray2[2].GetPixel(45, 43);
+            enemyVals[2, 12] = imgarray2[2].GetPixel(65, 43);
+
+            //enemy champ 4
+            enemyVals[3, 0] = imgarray2[3].GetPixel(75, 13);
+            enemyVals[3, 1] = imgarray2[3].GetPixel(75, 53);
+            enemyVals[3, 2] = imgarray2[3].GetPixel(75, 33);
+            enemyVals[3, 3] = imgarray2[3].GetPixel(55, 13);
+            enemyVals[3, 4] = imgarray2[3].GetPixel(55, 53);
+            enemyVals[3, 5] = imgarray2[3].GetPixel(55, 33);
+            enemyVals[3, 6] = imgarray2[3].GetPixel(35, 13);
+            enemyVals[3, 7] = imgarray2[3].GetPixel(35, 53);
+            enemyVals[3, 8] = imgarray2[3].GetPixel(35, 33);
+            enemyVals[3, 9] = imgarray2[3].GetPixel(45, 23);
+            enemyVals[3, 10] = imgarray2[3].GetPixel(65, 23);
+            enemyVals[3, 11] = imgarray2[3].GetPixel(45, 43);
+            enemyVals[3, 12] = imgarray2[3].GetPixel(65, 43);
+
+            //enemy champ 5
+            enemyVals[4, 0] = imgarray2[4].GetPixel(75, 13);
+            enemyVals[4, 1] = imgarray2[4].GetPixel(75, 53);
+            enemyVals[4, 2] = imgarray2[4].GetPixel(75, 33);
+            enemyVals[4, 3] = imgarray2[4].GetPixel(55, 13);
+            enemyVals[4, 4] = imgarray2[4].GetPixel(55, 53);
+            enemyVals[4, 5] = imgarray2[4].GetPixel(55, 33);
+            enemyVals[4, 6] = imgarray2[4].GetPixel(35, 13);
+            enemyVals[4, 7] = imgarray2[4].GetPixel(35, 53);
+            enemyVals[4, 8] = imgarray2[4].GetPixel(35, 33);
+            enemyVals[4, 9] = imgarray2[4].GetPixel(45, 23);
+            enemyVals[4, 10] = imgarray2[4].GetPixel(65, 23);
+            enemyVals[4, 11] = imgarray2[4].GetPixel(45, 43);
+            enemyVals[4, 12] = imgarray2[4].GetPixel(65, 43);
+
             btnChamp1.BackgroundImage = imgarray2[0];
             btnChamp2.BackgroundImage = imgarray2[1];
             btnChamp3.BackgroundImage = imgarray2[2];
             btnChamp4.BackgroundImage = imgarray2[3];
             btnChamp5.BackgroundImage = imgarray2[4];
 
-           
+           /*
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
@@ -203,7 +325,7 @@ namespace SmartDraft
                 }
             }
             string champdata = sb.ToString();
-            
+            */
             if(radSolo.Checked == true)
             {
                 //Solo Lane
@@ -233,6 +355,19 @@ namespace SmartDraft
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+        //The reset button clears all fields on the program.
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            radADC.Checked = false;
+            radJungle.Checked = false;
+            radSolo.Checked = false;
+            radSupport.Checked = false;
+            btnChamp1.BackgroundImage = null;
+            btnChamp2.BackgroundImage = null;
+            btnChamp3.BackgroundImage = null;
+            btnChamp4.BackgroundImage = null;
+            btnChamp5.BackgroundImage = null;
         }
     }
 }
