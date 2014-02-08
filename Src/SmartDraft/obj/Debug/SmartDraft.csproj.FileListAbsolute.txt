@@ -29,3 +29,4 @@ C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.
 C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.pdb
 >>>>>>> 25d1a3eb62028118c8e9af5cc8350a1fb05c1e2d
 >>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
+C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.StartScreen.resources

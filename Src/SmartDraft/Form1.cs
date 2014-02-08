@@ -53,6 +53,9 @@ namespace SmartDraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            StartScreen start = new StartScreen();
+            start.Show();
+            
             //At minimum scale from top left to first pixel in champ portrait is
             //67w 62h
             //min width total = 1024
@@ -78,14 +81,12 @@ namespace SmartDraft
 
             int usernum;
 
-<<<<<<< HEAD
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
             System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
-=======
+
             //ParseUserData thing1 = new ParseUserData();
             //bool thingValue = thing1.parse();
->>>>>>> c5993f8e81375f6dee3f45d5b3f45abcf39b868b
 
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
