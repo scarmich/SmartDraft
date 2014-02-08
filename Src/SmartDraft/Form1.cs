@@ -217,6 +217,7 @@ namespace SmartDraft
                     //MessageBox.Show("the line"+line);
                     if(line.Contains(temp)){
                         champ[i] = line.Substring(0, line.IndexOf(" "));
+                        MessageBox.Show(champ[i]);
                     }
                 }
                 Champion newChamp = new Champion(champ[i],"solo");
