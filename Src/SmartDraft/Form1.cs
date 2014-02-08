@@ -199,7 +199,7 @@ namespace SmartDraft
                 String line;
 
                 // Read the file and display it line by line.
-                StreamReader file = File.OpenText("maps.txt");
+                StreamReader file = File.OpenText((String)"maps.txt");
                 MessageBox.Show("before");
                 MessageBox.Show(file.ReadLine());
                 while ((line = file.ReadLine()) != null)
