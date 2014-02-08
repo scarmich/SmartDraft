@@ -9,7 +9,6 @@ C:\Users\Shawn\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.csproj.Gene
 C:\Users\Shawn\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.exe
 C:\Users\Shawn\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.pdb
 =======
-<<<<<<< HEAD
 C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.exe.config
 C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.exe
 C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.pdb
@@ -19,7 +18,6 @@ C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.Pro
 C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.csproj.GenerateResource.Cache
 C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.exe
 C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.pdb
-=======
 C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.exe.config
 C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.exe
 C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\bin\Debug\SmartDraft.pdb
