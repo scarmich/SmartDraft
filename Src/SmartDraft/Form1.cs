@@ -317,5 +317,18 @@ namespace SmartDraft
         {
 
         }
+        //The reset button clears all fields on the program.
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            radADC.Checked = false;
+            radJungle.Checked = false;
+            radSolo.Checked = false;
+            radSupport.Checked = false;
+            btnChamp1.BackgroundImage = null;
+            btnChamp2.BackgroundImage = null;
+            btnChamp3.BackgroundImage = null;
+            btnChamp4.BackgroundImage = null;
+            btnChamp5.BackgroundImage = null;
+        }
     }
 }
