@@ -39,6 +39,7 @@
             this.btnChamp2 = new System.Windows.Forms.Button();
             this.btnChamp3 = new System.Windows.Forms.Button();
             this.btnChamp5 = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // radSupport
@@ -150,11 +151,22 @@
             this.btnChamp5.TabIndex = 10;
             this.btnChamp5.UseVisualStyleBackColor = true;
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(93, 122);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 11;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 151);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnChamp5);
             this.Controls.Add(this.btnChamp3);
             this.Controls.Add(this.btnChamp2);
@@ -187,6 +199,7 @@
         private System.Windows.Forms.Button btnChamp2;
         private System.Windows.Forms.Button btnChamp3;
         private System.Windows.Forms.Button btnChamp5;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
