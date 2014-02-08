@@ -27,14 +27,14 @@ namespace SmartDraft
 
         Bitmap CaptureScreen(int x1, int y1)
         {
-            var image = new Bitmap(120, 120, PixelFormat.Format32bppArgb);
+            var image = new Bitmap(100, 75, PixelFormat.Format32bppArgb);
             var gfx = Graphics.FromImage(image);
-            MessageBox.Show(""+Screen.PrimaryScreen.Bounds.Size);
-            gfx.CopyFromScreen(Screen.PrimaryScreen.Bounds.X+x1+35, Screen.PrimaryScreen.Bounds.Y+y1+35, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+            //MessageBox.Show(""+Screen.PrimaryScreen.Bounds.Size);
+            gfx.CopyFromScreen(x1, y1, 0, 0, new Size(100,75), CopyPixelOperation.SourceCopy);
             //gfx.CopyFromScreen(x1, y1,);
-            Rectangle cropRect = new Rectangle();
+            /*Rectangle cropRect = new Rectangle();
             Bitmap src = image;
-            Bitmap target = new Bitmap(50, 50);
+            Bitmap target = new Bitmap(120, 50);
 
             using(Graphics g = Graphics.FromImage(target))
             {
@@ -42,8 +42,8 @@ namespace SmartDraft
                                 cropRect,                        
                                 GraphicsUnit.Pixel);
             }
-            MessageBox.Show(src.Width+" "+src.Height);
-            return src;
+            MessageBox.Show(image.Width+" "+image.Height);*/
+            return image;
         }
 
         public Form1()
@@ -60,6 +60,16 @@ namespace SmartDraft
             //from champ 1 to champ 2 is 62 -> 81, width of img is 46
             ToolTip tip = new ToolTip();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+            //this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
+            this.btnChamp1.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
+>>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
+>>>>>>> a594736e3a490afb10deb8fa7df680b53846419e
+>>>>>>> 1d889c316a9a47fc45c82a3cac2890ef0e5c08bc
         }
 
         /*
@@ -76,10 +86,18 @@ namespace SmartDraft
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+            int usernum;
+=======
+<<<<<<< HEAD
+>>>>>>> 1d889c316a9a47fc45c82a3cac2890ef0e5c08bc
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
             
+>>>>>>> a594736e3a490afb10deb8fa7df680b53846419e
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
             IntPtr ptr = lol.MainWindowHandle;
@@ -90,17 +108,108 @@ namespace SmartDraft
             GetWindowRect(ptr, out NotepadRect);
             MessageBox.Show("" + NotepadRect.X);
             Bitmap[] imgarray = new Bitmap[10];
+            Bitmap[] imgarray2 = new Bitmap[10];
             int x = NotepadRect.X;
             int y = NotepadRect.Y;
+            //Figure out which turn you are
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 0)
+                {
+                    imgarray[i] = CaptureScreen(x + 45, y + 60);
+                    y += 120;
+                }
+                else if (i == 1)
+                {
+                    imgarray[i] = CaptureScreen(x + 45, y + 30);
+                    y += 120;
+                }
+                else
+                {
+                    imgarray[i] = CaptureScreen(x + 45, y);
+                    y += 90;
+                }
+
+                //need to adjust this based on window size
+
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                if (imgarray[i].GetPixel(20, 10).A == 255
+                    && imgarray[i].GetPixel(20, 10).B == 21
+                    && imgarray[i].GetPixel(20, 10).R == 250
+                    && imgarray[i].GetPixel(20, 10).G == 147)
+                {
+                    usernum = i;
+                    MessageBox.Show(""+usernum);
+                }
+            }
+            x = NotepadRect.X;
+            y = NotepadRect.Y;
+            //Get all the opponents
             for (int i = 0; i < 10; i ++ )
             {
-                imgarray[i] = CaptureScreen(x,y);
-                y += 20;
+                if (i == 0)
+                {
+                    imgarray2[i] = CaptureScreen(x+970, y + 60);
+                    y += 120;
+                }
+                else if (i == 1)
+                {
+                    imgarray2[i] = CaptureScreen(x+970, y + 30);
+                    y += 120;
+                }
+                else
+                {
+                    imgarray2[i] = CaptureScreen(x+970, y);
+                    y += 90;
+                }
+                //need to adjust this based on window size
                 
+<<<<<<< HEAD
+            }/*
+            Color[,] pixelarray = new Color[10,12];
+            for (int i = 0; i < 10; i ++ )
+            {
+                for (int j = 0; j < 4; j++ )
+                {
+                    pixelarray[i,j] = 
+                }
+            }*/
+            
+            imgarray2[1].SetPixel(75, 13,Color.Pink);
+            imgarray2[1].SetPixel(75, 53, Color.Pink);
+            imgarray2[1].SetPixel(75, 33, Color.Pink);
+
+            imgarray2[1].SetPixel(55, 13, Color.Pink);
+            imgarray2[1].SetPixel(55, 53, Color.Pink);
+            imgarray2[1].SetPixel(55, 33, Color.Pink);
+
+            imgarray2[1].SetPixel(35, 13, Color.Pink);
+            imgarray2[1].SetPixel(35, 53, Color.Pink);
+            imgarray2[1].SetPixel(35, 33, Color.Pink);
+
+            imgarray2[1].SetPixel(45, 23, Color.Pink);
+            imgarray2[1].SetPixel(65, 23, Color.Pink);
+            imgarray2[1].SetPixel(45, 43, Color.Pink);
+            imgarray2[1].SetPixel(65, 43, Color.Pink);
+            
+            btnChamp1.BackgroundImage = imgarray2[0];
+            btnChamp2.BackgroundImage = imgarray2[1];
+            btnChamp3.BackgroundImage = imgarray2[2];
+            btnChamp4.BackgroundImage = imgarray2[3];
+            btnChamp5.BackgroundImage = imgarray2[4];
+            
+=======
             }
             btnChamp1.BackgroundImage = imgarray[0];
             btnChamp2.BackgroundImage = imgarray[1];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
+>>>>>>> a594736e3a490afb10deb8fa7df680b53846419e
+>>>>>>> 1d889c316a9a47fc45c82a3cac2890ef0e5c08bc
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
