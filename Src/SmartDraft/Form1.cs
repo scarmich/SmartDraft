@@ -158,24 +158,115 @@ namespace SmartDraft
                     pixelarray[i,j] = 
                 }
             }*/
-            
-            imgarray2[1].SetPixel(75, 13,Color.Pink);
-            imgarray2[1].SetPixel(75, 53, Color.Pink);
-            imgarray2[1].SetPixel(75, 33, Color.Pink);
+            for (int i = 0; i < 5; i++ )
+            {
+                /*imgarray2[i].SetPixel(75, 13, Color.Pink);
+                imgarray2[i].SetPixel(75, 53, Color.Pink);
+                imgarray2[i].SetPixel(75, 33, Color.Pink);
 
-            imgarray2[1].SetPixel(55, 13, Color.Pink);
-            imgarray2[1].SetPixel(55, 53, Color.Pink);
-            imgarray2[1].SetPixel(55, 33, Color.Pink);
+                imgarray2[i].SetPixel(55, 13, Color.Pink);
+                imgarray2[i].SetPixel(55, 53, Color.Pink);
+                imgarray2[i].SetPixel(55, 33, Color.Pink);
 
-            imgarray2[1].SetPixel(35, 13, Color.Pink);
-            imgarray2[1].SetPixel(35, 53, Color.Pink);
-            imgarray2[1].SetPixel(35, 33, Color.Pink);
+                imgarray2[i].SetPixel(35, 13, Color.Pink);
+                imgarray2[i].SetPixel(35, 53, Color.Pink);
+                imgarray2[i].SetPixel(35, 33, Color.Pink);
 
-            imgarray2[1].SetPixel(45, 23, Color.Pink);
-            imgarray2[1].SetPixel(65, 23, Color.Pink);
-            imgarray2[1].SetPixel(45, 43, Color.Pink);
-            imgarray2[1].SetPixel(65, 43, Color.Pink);
-            
+                imgarray2[i].SetPixel(45, 23, Color.Pink);
+                imgarray2[i].SetPixel(65, 23, Color.Pink);
+                imgarray2[i].SetPixel(45, 43, Color.Pink);
+                imgarray2[i].SetPixel(65, 43, Color.Pink);
+                */
+                System.Diagnostics.Debug.WriteLine(imgarray2[i].GetPixel(75,13)+""
+                    +imgarray2[i].GetPixel(75,53)+""
+                    +imgarray2[i].GetPixel(75,33)+""
+                    +imgarray2[i].GetPixel(55,13)+""
+                    +imgarray2[i].GetPixel(55,53)+""
+                    +imgarray2[i].GetPixel(55,33)+""
+                    +imgarray2[i].GetPixel(35,13)+""
+                    +imgarray2[i].GetPixel(35,53)+""
+                    +imgarray2[i].GetPixel(35,33)+""
+                    +imgarray2[i].GetPixel(45,23)+""
+                    +imgarray2[i].GetPixel(65,23)+""
+                    +imgarray2[i].GetPixel(45,43)+""
+                    +imgarray2[i].GetPixel(65,43));
+            }
+            Color[,] enemyVals = new Color[5,13];
+            //enemy champ 1
+            enemyVals[0,0] = imgarray2[0].GetPixel(75, 13);
+            enemyVals[0, 1] = imgarray2[0].GetPixel(75, 53);
+            enemyVals[0, 2] = imgarray2[0].GetPixel(75, 33);
+            enemyVals[0, 3] = imgarray2[0].GetPixel(55, 13);
+            enemyVals[0, 4] = imgarray2[0].GetPixel(55, 53);
+            enemyVals[0, 5] = imgarray2[0].GetPixel(55, 33);
+            enemyVals[0, 6] = imgarray2[0].GetPixel(35, 13);
+            enemyVals[0, 7] = imgarray2[0].GetPixel(35, 53);
+            enemyVals[0, 8] = imgarray2[0].GetPixel(35, 33);
+            enemyVals[0, 9] = imgarray2[0].GetPixel(45, 23);
+            enemyVals[0, 10] = imgarray2[0].GetPixel(65, 23);
+            enemyVals[0, 11] = imgarray2[0].GetPixel(45, 43);
+            enemyVals[0, 12] = imgarray2[0].GetPixel(65, 43);
+
+            //enemy champ 2
+            enemyVals[1, 0] = imgarray2[1].GetPixel(75, 13);
+            enemyVals[1, 1] = imgarray2[1].GetPixel(75, 53);
+            enemyVals[1, 2] = imgarray2[1].GetPixel(75, 33);
+            enemyVals[1, 3] = imgarray2[1].GetPixel(55, 13);
+            enemyVals[1, 4] = imgarray2[1].GetPixel(55, 53);
+            enemyVals[1, 5] = imgarray2[1].GetPixel(55, 33);
+            enemyVals[1, 6] = imgarray2[1].GetPixel(35, 13);
+            enemyVals[1, 7] = imgarray2[1].GetPixel(35, 53);
+            enemyVals[1, 8] = imgarray2[1].GetPixel(35, 33);
+            enemyVals[1, 9] = imgarray2[1].GetPixel(45, 23);
+            enemyVals[1, 10] = imgarray2[1].GetPixel(65, 23);
+            enemyVals[1, 11] = imgarray2[1].GetPixel(45, 43);
+            enemyVals[1, 12] = imgarray2[1].GetPixel(65, 43);
+
+            //enemy champ 3
+            enemyVals[2, 0] = imgarray2[2].GetPixel(75, 13);
+            enemyVals[2, 1] = imgarray2[2].GetPixel(75, 53);
+            enemyVals[2, 2] = imgarray2[2].GetPixel(75, 33);
+            enemyVals[2, 3] = imgarray2[2].GetPixel(55, 13);
+            enemyVals[2, 4] = imgarray2[2].GetPixel(55, 53);
+            enemyVals[2, 5] = imgarray2[2].GetPixel(55, 33);
+            enemyVals[2, 6] = imgarray2[2].GetPixel(35, 13);
+            enemyVals[2, 7] = imgarray2[2].GetPixel(35, 53);
+            enemyVals[2, 8] = imgarray2[2].GetPixel(35, 33);
+            enemyVals[2, 9] = imgarray2[2].GetPixel(45, 23);
+            enemyVals[2, 10] = imgarray2[2].GetPixel(65, 23);
+            enemyVals[2, 11] = imgarray2[2].GetPixel(45, 43);
+            enemyVals[2, 12] = imgarray2[2].GetPixel(65, 43);
+
+            //enemy champ 4
+            enemyVals[3, 0] = imgarray2[3].GetPixel(75, 13);
+            enemyVals[3, 1] = imgarray2[3].GetPixel(75, 53);
+            enemyVals[3, 2] = imgarray2[3].GetPixel(75, 33);
+            enemyVals[3, 3] = imgarray2[3].GetPixel(55, 13);
+            enemyVals[3, 4] = imgarray2[3].GetPixel(55, 53);
+            enemyVals[3, 5] = imgarray2[3].GetPixel(55, 33);
+            enemyVals[3, 6] = imgarray2[3].GetPixel(35, 13);
+            enemyVals[3, 7] = imgarray2[3].GetPixel(35, 53);
+            enemyVals[3, 8] = imgarray2[3].GetPixel(35, 33);
+            enemyVals[3, 9] = imgarray2[3].GetPixel(45, 23);
+            enemyVals[3, 10] = imgarray2[3].GetPixel(65, 23);
+            enemyVals[3, 11] = imgarray2[3].GetPixel(45, 43);
+            enemyVals[3, 12] = imgarray2[3].GetPixel(65, 43);
+
+            //enemy champ 5
+            enemyVals[4, 0] = imgarray2[4].GetPixel(75, 13);
+            enemyVals[4, 1] = imgarray2[4].GetPixel(75, 53);
+            enemyVals[4, 2] = imgarray2[4].GetPixel(75, 33);
+            enemyVals[4, 3] = imgarray2[4].GetPixel(55, 13);
+            enemyVals[4, 4] = imgarray2[4].GetPixel(55, 53);
+            enemyVals[4, 5] = imgarray2[4].GetPixel(55, 33);
+            enemyVals[4, 6] = imgarray2[4].GetPixel(35, 13);
+            enemyVals[4, 7] = imgarray2[4].GetPixel(35, 53);
+            enemyVals[4, 8] = imgarray2[4].GetPixel(35, 33);
+            enemyVals[4, 9] = imgarray2[4].GetPixel(45, 23);
+            enemyVals[4, 10] = imgarray2[4].GetPixel(65, 23);
+            enemyVals[4, 11] = imgarray2[4].GetPixel(45, 43);
+            enemyVals[4, 12] = imgarray2[4].GetPixel(65, 43);
+
             btnChamp1.BackgroundImage = imgarray2[0];
             btnChamp2.BackgroundImage = imgarray2[1];
             btnChamp3.BackgroundImage = imgarray2[2];
