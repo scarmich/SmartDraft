@@ -25,7 +25,7 @@ namespace SmartDraft
         [DllImport("user32.dll")]
         private static extern bool GetWindowRect(IntPtr hwnd, out Rectangle rect);
 
-        Bitmap CaptureScreen(int x1, int y1, int x2, int y2)
+        Bitmap CaptureScreen(int x1, int y1)
         {
             var image = new Bitmap(120, 120, PixelFormat.Format32bppArgb);
             var gfx = Graphics.FromImage(image);
@@ -59,11 +59,9 @@ namespace SmartDraft
             //min height total = 640
             //from champ 1 to champ 2 is 62 -> 81, width of img is 46
             ToolTip tip = new ToolTip();
-<<<<<<< HEAD
+
             //this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
-=======
             this.btnChamp1.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
->>>>>>> 25d1a3eb62028118c8e9af5cc8350a1fb05c1e2d
         }
 
         /*
@@ -90,8 +88,8 @@ namespace SmartDraft
             //MessageBox.Show(""+i);
             GetWindowRect(ptr, out NotepadRect);
             MessageBox.Show("" + NotepadRect.X);
-
-            button2.BackgroundImage = CaptureScreen(NotepadRect.X, NotepadRect.Y, NotepadRect.X + NotepadRect.Width, NotepadRect.Y+NotepadRect.Height);
+            
+            btnChamp2.BackgroundImage = CaptureScreen(NotepadRect.X, NotepadRect.Y);
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
