@@ -24,11 +24,14 @@ namespace SmartDraft
         {
             
             ToolTip tip = new ToolTip();
-            this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
+            //this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ParseUserData thing1 = new ParseUserData();
+            bool thingValue = thing1.parse();
+
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
