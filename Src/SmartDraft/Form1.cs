@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-
 namespace SmartDraft
 {
     public partial class Form1 : Form
@@ -24,7 +23,7 @@ namespace SmartDraft
         {
             
             ToolTip tip = new ToolTip();
-            this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
+            this.btnChamp1.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,23 +41,29 @@ namespace SmartDraft
             }
             string champdata = sb.ToString();
             
-            if(radioButton4.Checked){
+            if(radSolo.Checked == true)
+            {
                 //Solo Lane
                 //run(solo,champdata)
             }
-            else if(radioButton3.Checked){
+            else if(radADC.Checked == true)
+            {
                 //ADC
                 //run(adc,champdata)
             }
-            else if (radioButton2.Checked)
+            else if (radJungle.Checked == true)
             {
                 //Jungle
                 //run(jungle,champdata)
             }
-            else
+            else if (radSupport.Checked == true)
             {
                 //Support
                 //run(sup,champdata)
+            }
+            else //nothing is selected
+            {
+                MessageBox.Show("Please select a role you are picking for.");
             }
         }
 
