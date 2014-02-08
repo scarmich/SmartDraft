@@ -59,13 +59,7 @@ namespace SmartDraft
             //min height total = 640
             //from champ 1 to champ 2 is 62 -> 81, width of img is 46
             ToolTip tip = new ToolTip();
-<<<<<<< HEAD
-            //this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
-=======
 
-            //this.button2.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
-            this.btnChamp1.BackgroundImage = Image.FromFile(@"C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\img\Aatrox.png");
->>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
         }
 
         /*
@@ -82,11 +76,9 @@ namespace SmartDraft
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
-
-=======
             
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
@@ -108,7 +100,7 @@ namespace SmartDraft
             }
             btnChamp1.BackgroundImage = imgarray[0];
             btnChamp2.BackgroundImage = imgarray[1];
->>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
+
             StringBuilder sb = new StringBuilder();
             using (StreamReader sr = new StreamReader("champdata.txt"))
             {
