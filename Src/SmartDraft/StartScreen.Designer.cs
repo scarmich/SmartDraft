@@ -1,6 +1,6 @@
 ﻿namespace SmartDraft
 {
-    partial class StartScreen
+    partial class frmStartScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.btnFinish.UseVisualStyleBackColor = true;
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
-            // StartScreen
+            // frmStartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +79,8 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblGreetings);
-            this.Name = "StartScreen";
+            this.Name = "frmStartScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartScreen";
             this.Load += new System.EventHandler(this.StartScreen_Load);
             this.ResumeLayout(false);

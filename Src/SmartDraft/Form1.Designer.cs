@@ -179,6 +179,7 @@
             this.Controls.Add(this.radJungle);
             this.Controls.Add(this.radSupport);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Champs4Chumps: By Shawn Carmichael, Tom Powers, Ryan Rumble";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

@@ -11,9 +11,9 @@ using System.IO;
 
 namespace SmartDraft
 {
-    public partial class StartScreen : Form
+    public partial class frmStartScreen : Form
     {
-        public StartScreen()
+        public frmStartScreen()
         {
             InitializeComponent();
         }
@@ -22,7 +22,8 @@ namespace SmartDraft
         {
             Close();
         }
-
+        //Submit button records the summoner's name to a file that will be used for 
+        //searching stats in previous games
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (txtName.Text == "")
@@ -31,7 +32,6 @@ namespace SmartDraft
                 txtName.Focus();
                 return;
             }
-            //submit name to parser as a name-to-search
             
             using (StreamWriter sw = File.AppendText("sumNames.txt"))
             {
@@ -47,17 +47,22 @@ namespace SmartDraft
 
         private void StartScreen_Load(object sender, EventArgs e)
         {
-            // If there is already a file for Summoner names, close the StartScreen form
+
+            // If there is already a non-empty file for Summoner names, 
+            // close the StartScreen form.
             if (File.Exists("sumNames.txt"))
             {
-                Close();
+                if (new FileInfo("sumNames.txt").Length > 0)
+                {
+                    Close();
+                }
             }
             else
             {
                 //Create the empty file
                 using (FileStream fs = File.Create("sumNames.txt"))
                 {
-
+                    //oooh, empty
                 }
             }
         }

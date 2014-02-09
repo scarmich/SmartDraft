@@ -53,9 +53,8 @@ namespace SmartDraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StartScreen start = new StartScreen();
+            frmStartScreen start = new frmStartScreen();
             start.Show();
-            
             //At minimum scale from top left to first pixel in champ portrait is
             //67w 62h
             //min width total = 1024
@@ -84,10 +83,7 @@ namespace SmartDraft
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
             System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
-<<<<<<< HEAD
 
-=======
->>>>>>> 18889afd9f7215d396751b1fd7f57e6d12d739cb
             //ParseUserData thing1 = new ParseUserData();
             //bool thingValue = thing1.parse();
 
@@ -355,10 +351,16 @@ namespace SmartDraft
                 MessageBox.Show("Please select a role you are picking for.");
             }
         }
-
+        //This button will show graphs comparing stats of the selected champion
+        //and enemy champion, if there is a picture.
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (btnChamp1.BackgroundImage == null)
+            {
+                return;
+            }
+            FrmStats formStats = new FrmStats();
+            formStats.ShowDialog();
         }
         //The reset button clears all fields on the program.
         private void btnReset_Click(object sender, EventArgs e)
