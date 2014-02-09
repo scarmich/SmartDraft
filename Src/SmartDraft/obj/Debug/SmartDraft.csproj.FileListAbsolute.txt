@@ -30,5 +30,9 @@ C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.
 >>>>>>> 25d1a3eb62028118c8e9af5cc8350a1fb05c1e2d
 >>>>>>> 364220740347c86fd13ffaf91fed992fbe24e139
 C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.StartScreen.resources
+<<<<<<< HEAD
 C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.FrmStats.resources
 C:\Users\Rumble\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.frmStartScreen.resources
+=======
+C:\Users\Tom\Documents\GitHub\SmartDraft\Src\SmartDraft\obj\Debug\SmartDraft.StartScreen.resources
+>>>>>>> c8c51c99d60ea13005a2f9e0806992c7f48fa5dd

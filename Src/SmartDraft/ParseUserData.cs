@@ -1,12 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 public class ParseUserData
 {
 	public ParseUserData(){  }
 
-    public bool parse(){
+    public bool parse(String[] users){
 
         LocateUserLogs locator = new LocateUserLogs();
         String filepath = locator.locate();
@@ -21,19 +22,23 @@ public class ParseUserData
             StreamReader reader = File.OpenText(gamelog);
             String line; String champ = ""; String username = "";
 
+            List<String> champions = new List<String>();
+            List<String> summoners = new List<String>();
+
             while ((line = reader.ReadLine()) != null)
             {
-                if (line.Contains("ALWAYS") && line.Contains("Creating Hero") && line.Contains("...") == false )
+                if (line.Contains("ALWAYS") && line.Contains("Creating Hero") && line.Contains("...") == false)
                 {
                     line = reader.ReadLine();
-                    if (line.Contains("ALWAYS") == false) { 
+                    if (line.Contains("ALWAYS") == false)
+                    {
                         /* read through potential errors */
                         while ((line = reader.ReadLine()).Contains("ALWAYS") == false) { /*keep reading until line contains always*/}
                     }
                     int index = line.IndexOf("ALWAYS");
                     line = line.Substring(index + 8);
 
-                    if ( line.Contains("Hero") && line.Contains("pawning") == false )
+                    if (line.Contains("Hero ") && line.Contains("pawning") == false)
                     {
                         String[] components = line.Split(' ');
                         int compLength = components.Length;
@@ -50,10 +55,10 @@ public class ParseUserData
                         }
                     }
 
-                    System.Diagnostics.Debug.WriteLine(username + " is using " + champ);
-
+                    champions.Add(champ);
+                    summoners.Add(username);
                 }
-                else if (line.Contains("ALWAYS") && line.Contains("Hero") && line.Contains("created for"))
+                else if (line.Contains("ALWAYS") && line.Contains("Hero ") && line.Contains("created for"))
                 {
                     int index = line.IndexOf("ALWAYS");
                     line = line.Substring(index + 8);
@@ -71,10 +76,45 @@ public class ParseUserData
                             username = username + " " + components[i];
                         }
                     }
-                    System.Diagnostics.Debug.WriteLine(username + " is using " + champ);
+                    champions.Add(champ);
+                    summoners.Add(username);
+                }
+                else if (line.Contains("ALWAYS") && line.Contains("EXITCODE_WIN"))
+                {
+
+                }
+                else if (line.Contains("ALWAYS") && line.Contains("EXITCODE_LOSE"))
+                {
+
                 }
             }
 
+            int champLocation = -1;
+
+            /* determine champion played */
+            foreach (String summName in users)
+            {
+                for (int i = 0; i < summoners.Count; i++)
+                {
+                    if (summName.Equals(summoners[i])) { champLocation = i; System.Diagnostics.Debug.WriteLine("You played " + champions[i]); }
+                }
+            }
+
+            /* determine enemies */
+            if (champLocation < (champions.Count / 2))
+            {
+                for (int i = champions.Count / 2; i < champions.Count; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine("Enemy is " + champions[i]);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < champions.Count / 2; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine("Enemy is " + champions[i]);
+                }
+            }
 
         }
 

@@ -40,6 +40,7 @@
             this.btnChamp3 = new System.Windows.Forms.Button();
             this.btnChamp5 = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // radSupport
@@ -161,11 +162,23 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(285, 138);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 151);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnChamp5);
             this.Controls.Add(this.btnChamp3);
@@ -201,6 +214,7 @@
         private System.Windows.Forms.Button btnChamp3;
         private System.Windows.Forms.Button btnChamp5;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

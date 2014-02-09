@@ -53,7 +53,18 @@ namespace SmartDraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             frmStartScreen start = new frmStartScreen();
+=======
+            radioButton1.Checked = true;
+            radioButton1.Visible = false;
+
+            radADC.Checked = false;
+            radJungle.Checked = false;
+            radSolo.Checked = false;
+            radSupport.Checked = false;
+            StartScreen start = new StartScreen();
+>>>>>>> c8c51c99d60ea13005a2f9e0806992c7f48fa5dd
             start.Show();
             //At minimum scale from top left to first pixel in champ portrait is
             //67w 62h
@@ -81,7 +92,10 @@ namespace SmartDraft
             int usernum;
 
             ParseUserData thing1 = new ParseUserData();
-            bool thingValue = thing1.parse();
+            String[] userdata = new String[2];
+            userdata[0] = "Segg Faultz";
+            userdata[1] = "Ready For Chaos";
+            bool thingValue = thing1.parse(userdata);
             System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
 
             //ParseUserData thing1 = new ParseUserData();
@@ -220,6 +234,7 @@ namespace SmartDraft
                     //MessageBox.Show("the line"+line);
                     if(line.Contains(temp)){
                         champ[i] = line.Substring(0, line.IndexOf(" "));
+                        MessageBox.Show(champ[i]);
                     }
                 }
                 Champion newChamp = new Champion(champ[i],"solo");
