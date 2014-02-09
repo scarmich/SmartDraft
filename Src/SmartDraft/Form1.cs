@@ -53,6 +53,16 @@ namespace SmartDraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            radioButton1.Checked = true;
+            radioButton1.Visible = false;
+
+            radADC.Checked = false;
+            radJungle.Checked = false;
+            radSolo.Checked = false;
+            radSupport.Checked = false;
+            StartScreen start = new StartScreen();
+            start.Show();
+            
             //At minimum scale from top left to first pixel in champ portrait is
             //67w 62h
             //min width total = 1024
@@ -75,7 +85,7 @@ namespace SmartDraft
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
             int usernum;
 
             ParseUserData thing1 = new ParseUserData();
@@ -209,28 +219,29 @@ namespace SmartDraft
                 //if(curLine.Contains(temp))
                 //champ[i] = first word
                 //MessageBox.Show(champ[i]);
-                MessageBox.Show(temp);
+                //MessageBox.Show(temp);
                 String line;
 
                 // Read the file and display it line by line.
-                StreamReader file = File.OpenText((String)"maps.txt");
-                MessageBox.Show("before");
-                MessageBox.Show(file.ReadLine());
+                StreamReader file = File.OpenText("maps.txt");
+                //MessageBox.Show("before");
+                //MessageBox.Show(file.ReadLine());
                 while ((line = file.ReadLine()) != null)
                 {
-                    MessageBox.Show("the line"+line);
+                    //MessageBox.Show("the line"+line);
                     if(line.Contains(temp)){
                         champ[i] = line.Substring(0, line.IndexOf(" "));
+                        MessageBox.Show(champ[i]);
                     }
                 }
-                MessageBox.Show("after while"+champ[i]);
+                Champion newChamp = new Champion(champ[i],"solo");
                 file.Close();
+                MessageBox.Show(newChamp.getPos());
+                
 
 
 
-
-
-            }
+            }/*
             Color[,] enemyVals = new Color[5,13];
             //enemy champ 1
             enemyVals[0,0] = imgarray2[0].GetPixel(75, 13);
@@ -306,7 +317,7 @@ namespace SmartDraft
             enemyVals[4, 10] = imgarray2[4].GetPixel(65, 23);
             enemyVals[4, 11] = imgarray2[4].GetPixel(45, 43);
             enemyVals[4, 12] = imgarray2[4].GetPixel(65, 43);
-
+            */
             btnChamp1.BackgroundImage = imgarray2[0];
             btnChamp2.BackgroundImage = imgarray2[1];
             btnChamp3.BackgroundImage = imgarray2[2];
