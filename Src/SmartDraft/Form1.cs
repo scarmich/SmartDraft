@@ -53,6 +53,13 @@ namespace SmartDraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            radioButton1.Checked = true;
+            radioButton1.Visible = false;
+
+            radADC.Checked = false;
+            radJungle.Checked = false;
+            radSolo.Checked = false;
+            radSupport.Checked = false;
             StartScreen start = new StartScreen();
             start.Show();
             
@@ -84,10 +91,7 @@ namespace SmartDraft
             ParseUserData thing1 = new ParseUserData();
             bool thingValue = thing1.parse();
             System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
-<<<<<<< HEAD
 
-=======
->>>>>>> 18889afd9f7215d396751b1fd7f57e6d12d739cb
             //ParseUserData thing1 = new ParseUserData();
             //bool thingValue = thing1.parse();
 
