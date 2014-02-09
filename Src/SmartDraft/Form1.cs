@@ -53,6 +53,9 @@ namespace SmartDraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            frmStartScreen start = new frmStartScreen();
+=======
             radioButton1.Checked = true;
             radioButton1.Visible = false;
 
@@ -61,8 +64,8 @@ namespace SmartDraft
             radSolo.Checked = false;
             radSupport.Checked = false;
             StartScreen start = new StartScreen();
+>>>>>>> c8c51c99d60ea13005a2f9e0806992c7f48fa5dd
             start.Show();
-            
             //At minimum scale from top left to first pixel in champ portrait is
             //67w 62h
             //min width total = 1024
@@ -424,10 +427,16 @@ namespace SmartDraft
             btnChamp4.BackgroundImage = imgarray2[3];
             btnChamp5.BackgroundImage = imgarray2[4];
         }
-
+        //This button will show graphs comparing stats of the selected champion
+        //and enemy champion, if there is a picture.
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (btnChamp1.BackgroundImage == null)
+            {
+                return;
+            }
+            FrmStats formStats = new FrmStats();
+            formStats.ShowDialog();
         }
         //The reset button clears all fields on the program.
         private void btnReset_Click(object sender, EventArgs e)
