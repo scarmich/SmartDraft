@@ -88,15 +88,38 @@ namespace SmartDraft
             
             int usernum;
 
+            StreamReader sr = File.OpenText("sumNames.txt");
+            string[] champ = new string[5];
             ParseUserData thing1 = new ParseUserData();
             String[] userdata = new String[2];
-            userdata[0] = "Segg Faultz";
-            userdata[1] = "Ready For Chaos";
-            bool thingValue = thing1.parse(userdata);
-            System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
+            String line1;
+            int count = 0;
+            int numEnemies = 0;
+            StreamReader file = File.OpenText("maps.txt");
+            //MessageBox.Show("before");
+            //MessageBox.Show(file.ReadLine());
+            List<Champion> champEntry = new List<Champion>();
+            
+            while ((line1 = file.ReadLine()) != null)
+            {
+                //MessageBox.Show(line1.Substring(line1.IndexOf(" "),line1.IndexOf("Color")-5));
+                String[] splitter = line1.Split(' ');
+                //MessageBox.Show(splitter[1]);
+              
+                champEntry.Add(new Champion(line1.Substring(0, line1.IndexOf(" ")),splitter[1]));
 
-            //ParseUserData thing1 = new ParseUserData();
-            //bool thingValue = thing1.parse();
+            }
+            file.Close();
+            while ((line1 = sr.ReadLine()) != null)
+            {
+                userdata[count] = line1;
+                MessageBox.Show(line1);
+                count++;
+
+            }
+            sr.Close();
+            bool thingValue = thing1.parse(userdata,ref champEntry);
+            //System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
 
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
@@ -106,7 +129,7 @@ namespace SmartDraft
             
             //MessageBox.Show(""+i);
             GetWindowRect(ptr, out NotepadRect);
-            MessageBox.Show("" + NotepadRect.X);
+            //MessageBox.Show("" + NotepadRect.X);
             Bitmap[] imgarray = new Bitmap[10];
             Bitmap[] imgarray2 = new Bitmap[10];
             int x = NotepadRect.X;
@@ -154,17 +177,17 @@ namespace SmartDraft
             {
                 if (i == 0)
                 {
-                    imgarray2[i] = CaptureScreen(x+970, y + 60);
-                    y += 120;
+                    imgarray2[i] = CaptureScreen(x+856, y + 50);
+                    y += 140;
                 }
                 else if (i == 1)
                 {
-                    imgarray2[i] = CaptureScreen(x+970, y + 30);
+                    imgarray2[i] = CaptureScreen(x+857, y + 30);
                     y += 120;
                 }
                 else
                 {
-                    imgarray2[i] = CaptureScreen(x+970, y);
+                    imgarray2[i] = CaptureScreen(x+857, y);
                     y += 90;
                 }
                 //need to adjust this based on window size
@@ -184,24 +207,25 @@ namespace SmartDraft
             }*/
             for (int i = 0; i < 5; i++ )
             {
-               /* imgarray[i].SetPixel(75, 13, Color.Pink);
-                imgarray[i].SetPixel(75, 53, Color.Pink);
-                imgarray[i].SetPixel(75, 33, Color.Pink);
+                
+                imgarray2[i].SetPixel(75, 13, Color.Pink);
+                imgarray2[i].SetPixel(75, 53, Color.Pink);
+                imgarray2[i].SetPixel(75, 33, Color.Pink);
 
-                imgarray[i].SetPixel(55, 13, Color.Pink);
-                imgarray[i].SetPixel(55, 53, Color.Pink);
-                imgarray[i].SetPixel(55, 33, Color.Pink);
+                imgarray2[i].SetPixel(55, 13, Color.Pink);
+                imgarray2[i].SetPixel(55, 53, Color.Pink);
+                imgarray2[i].SetPixel(55, 33, Color.Pink);
 
-                imgarray[i].SetPixel(35, 13, Color.Pink);
-                imgarray[i].SetPixel(35, 53, Color.Pink);
-                imgarray[i].SetPixel(35, 33, Color.Pink);
+                imgarray2[i].SetPixel(35, 13, Color.Pink);
+                imgarray2[i].SetPixel(35, 53, Color.Pink);
+                imgarray2[i].SetPixel(35, 33, Color.Pink);
 
-                imgarray[i].SetPixel(45, 23, Color.Pink);
-                imgarray[i].SetPixel(65, 23, Color.Pink);
-                imgarray[i].SetPixel(45, 43, Color.Pink);
-                imgarray[i].SetPixel(65, 43, Color.Pink);*/
+                imgarray2[i].SetPixel(45, 23, Color.Pink);
+                imgarray2[i].SetPixel(65, 23, Color.Pink);
+                imgarray2[i].SetPixel(45, 43, Color.Pink);
+                imgarray2[i].SetPixel(65, 43, Color.Pink);
                 string temp = "";
-                string[] champ = new string[5];
+                
                 temp = imgarray2[i].GetPixel(75,13)+""
                     +imgarray2[i].GetPixel(75,53)+""
                     +imgarray2[i].GetPixel(75,33)+""
@@ -219,24 +243,24 @@ namespace SmartDraft
                 //if(curLine.Contains(temp))
                 //champ[i] = first word
                 //MessageBox.Show(champ[i]);
-                //MessageBox.Show(temp);
+                MessageBox.Show(temp);
                 String line;
 
                 // Read the file and display it line by line.
-                StreamReader file = File.OpenText("maps.txt");
-                //MessageBox.Show("before");
-                //MessageBox.Show(file.ReadLine());
+                
+                file = File.OpenText("maps.txt");
                 while ((line = file.ReadLine()) != null)
                 {
                     //MessageBox.Show("the line"+line);
                     if(line.Contains(temp)){
-                        champ[i] = line.Substring(0, line.IndexOf(" "));
+                        champ[i] = line.Substring(0, line.IndexOf(" "));//enemy champs
+                        numEnemies++;
                         MessageBox.Show(champ[i]);
                     }
                 }
-                Champion newChamp = new Champion(champ[i],"solo");
+                //Champion newChamp = new Champion(champ[i]);
                 file.Close();
-                MessageBox.Show(newChamp.getPos());
+                //MessageBox.Show(newChamp.getPos());
                 
 
 
@@ -318,11 +342,11 @@ namespace SmartDraft
             enemyVals[4, 11] = imgarray2[4].GetPixel(45, 43);
             enemyVals[4, 12] = imgarray2[4].GetPixel(65, 43);
             */
-            btnChamp1.BackgroundImage = imgarray2[0];
-            btnChamp2.BackgroundImage = imgarray2[1];
-            btnChamp3.BackgroundImage = imgarray2[2];
-            btnChamp4.BackgroundImage = imgarray2[3];
-            btnChamp5.BackgroundImage = imgarray2[4];
+
+            //data anal
+
+
+
 
            /*
             StringBuilder sb = new StringBuilder();
@@ -337,11 +361,41 @@ namespace SmartDraft
                 }
             }
             string champdata = sb.ToString();
-            */
+            *//*
             if(radSolo.Checked == true)
             {
                 //Solo Lane
                 //run(solo,champdata)
+                List<String> soloChamps = new List<String>();
+                double winRate = 0.0;
+                double average = 0.0;
+                Dictionary<String, double> soloChampAvgs = new Dictionary<String, double>();
+                for (int i = 0; i < 117; i++ )
+                {
+                    if(champEntry[i].getPos() == "solo"){
+                        soloChamps.Add(champEntry[i].getName());
+                        //compare soloChamps vs enemy champs
+                        Champion curChamp = champEntry[i];
+                        for (int ind = 0; ind < numEnemies; ind++ )
+                        {
+                            winRate = curChamp.lookUpWinRate(champ[ind]);
+                            average += winRate;
+                        }
+                        average = average / numEnemies;
+                        soloChampAvgs.Add(curChamp.getName(),average);
+                    }
+                }
+                List<KeyValuePair<string, double>> sortedList = soloChampAvgs.ToList();
+                sortedList.Sort(delegate(KeyValuePair<string, double> firstPair,
+                        KeyValuePair<string, double> nextPair)
+                        {
+                            return firstPair.Value.CompareTo(nextPair.Value);
+                        }
+                    );
+                MessageBox.Show(sortedList[1].ToString());
+                
+                
+                
             }
             else if(radADC.Checked == true)
             {
@@ -361,7 +415,14 @@ namespace SmartDraft
             else //nothing is selected
             {
                 MessageBox.Show("Please select a role you are picking for.");
-            }
+            }*/
+            //pick rec champs
+            //change pics
+            btnChamp1.BackgroundImage = imgarray2[0];
+            btnChamp2.BackgroundImage = imgarray2[1];
+            btnChamp3.BackgroundImage = imgarray2[2];
+            btnChamp4.BackgroundImage = imgarray2[3];
+            btnChamp5.BackgroundImage = imgarray2[4];
         }
 
         private void button2_Click(object sender, EventArgs e)

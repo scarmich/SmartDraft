@@ -35,7 +35,7 @@ namespace SmartDraft
             
             using (StreamWriter sw = File.AppendText("sumNames.txt"))
             {
-                sw.WriteLine(txtName.Text + "\r\n");
+                sw.WriteLine(txtName.Text);
             }
 
             txtName.Text = "";

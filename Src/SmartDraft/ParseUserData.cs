@@ -2,12 +2,13 @@
 using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using SmartDraft;
 
 public class ParseUserData
 {
 	public ParseUserData(){  }
 
-    public bool parse(String[] users){
+    public bool parse(String[] users,ref List<SmartDraft.Champion> champlist){
 
         LocateUserLogs locator = new LocateUserLogs();
         String filepath = locator.locate();
@@ -24,6 +25,9 @@ public class ParseUserData
 
             List<String> champions = new List<String>();
             List<String> summoners = new List<String>();
+
+            bool victory = false;
+            String champPlayed = "";
 
             while ((line = reader.ReadLine()) != null)
             {
@@ -81,11 +85,11 @@ public class ParseUserData
                 }
                 else if (line.Contains("ALWAYS") && line.Contains("EXITCODE_WIN"))
                 {
-
+                    victory = true;
                 }
                 else if (line.Contains("ALWAYS") && line.Contains("EXITCODE_LOSE"))
                 {
-
+                    victory = false;
                 }
             }
 
@@ -96,7 +100,8 @@ public class ParseUserData
             {
                 for (int i = 0; i < summoners.Count; i++)
                 {
-                    if (summName.Equals(summoners[i])) { champLocation = i; System.Diagnostics.Debug.WriteLine("You played " + champions[i]); }
+                    //MessageBox.Show(summName + " / " + summoners[i]);
+                    if (summName.Equals(summoners[i])) { champLocation = i; champPlayed = champions[i]; }
                 }
             }
 
@@ -105,19 +110,53 @@ public class ParseUserData
             {
                 for (int i = champions.Count / 2; i < champions.Count; i++)
                 {
-                    System.Diagnostics.Debug.WriteLine("Enemy is " + champions[i]);
+                    if (victory) {
+                        foreach( Champion hero in champlist ){
+                            if(hero.getName() == champPlayed){
+                                hero.updateWins(champions[i]);
+                            }
+                        }
+                    }
+                    else {
+                        foreach (Champion hero in champlist)
+                        {
+                            if (hero.getName() == champPlayed)
+                            {
+                                hero.updateLosses(champions[i]);
+                            }
+                        }
+                    }
                 }
             }
             else
             {
                 for (int i = 0; i < champions.Count / 2; i++)
                 {
-                    System.Diagnostics.Debug.WriteLine("Enemy is " + champions[i]);
+                    if (victory)
+                    {
+                        foreach (Champion hero in champlist)
+                        {
+                            if (hero.getName() == champPlayed)
+                            {
+                                hero.updateWins(champions[i]);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (Champion hero in champlist)
+                        {
+                            if (hero.getName() == champPlayed)
+                            {
+                                hero.updateLosses(champions[i]);
+                            }
+                        }
+                    }
                 }
             }
 
         }
 
-        return false;
+        return true;
     }
 }
