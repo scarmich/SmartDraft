@@ -78,14 +78,15 @@ namespace SmartDraft
 
             int usernum;
 
-<<<<<<< HEAD
             ParseUserData thing1 = new ParseUserData();
-            bool thingValue = thing1.parse();
+            String[] userdata = new String[2];
+            userdata[0] = "Segg Faultz";
+            userdata[1] = "Ready For Chaos";
+            bool thingValue = thing1.parse(userdata);
             System.Diagnostics.Debug.WriteLine("Returned from Parser without Error");
-=======
+
             //ParseUserData thing1 = new ParseUserData();
             //bool thingValue = thing1.parse();
->>>>>>> c5993f8e81375f6dee3f45d5b3f45abcf39b868b
 
             Process[] processes = Process.GetProcessesByName("LolClient");
             Process lol = processes[0];
